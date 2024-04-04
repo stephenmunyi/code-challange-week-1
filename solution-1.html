@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script scr =solution-1.js></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>solution 1</title>
+    <script defer src="solution-1.js"></script>
 </head>
-<script src="solution-1.js"></script>
-
 <body>
-    
+    <div class="Container">
+        <h1>solution 1</h1>
+    </div>
+    <div>
+        <lable for="anatomyMarks">ANATOMY MARKS</lable>
+        <input type="number" id="anatomyMarks" min="0" max="100">
+    </div>
+    <div>
+        <lable for="physiologyMarks">PHYSIOLOGY-1 MARKS</lable>
+        <input type="number" id="physiologyMarks" min="0" max="100">
+    </div>
+    <div>
+        <lable for="basicmetabolismMarks">BASIC METABOLISM MARKS</lable>
+        <input type="number" id="basicmetabolismMarks" min="0" max="100">
+    </div>
+    <button onclick="calculateGrade()">Calculate percentage</button>
+    <div id="result"></div>
 </body>
+
 </html>

@@ -1,22 +1,13 @@
-// speed checker
-var speedLimit=70;
-var kmperDemeritpoint =5;
-let speed;
-speed = prompt ("Enter your speed in km/hr");
-function tester(speed) {
-    const oky =Math.floor(speedLimit-speed)
-    if(speed <=speedLimit)
-    {
-    
-            return'speed is okay';
- }else{
-    const points = Math.floor((speed-speedLimit)/
-    kmperDemeritpoint);
-    if(points > 12) {
-        console.log("Lisence suspended");
-    }else {
-        console.log("points:" +points);
+
+function checkSpeed() {
+    var speed = document.getElementById('speed').value;
+    var limit = 70;
+    var demerits = 0;
+
+    if (speed < limit) {
+        document.getElementById('result').innerHTML = "Ok";
+    } else {
+        demerits = Math.floor((speed - limit) / 5);
+        document.getElementById('result').innerHTML = "Speeding by " + (speed - limit) + " km/s. " + demerits + "demerit point" + (demerits !== 1 ? "s" : "");
     }
- }
 }
-tester(speed)
